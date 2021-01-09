@@ -34,7 +34,7 @@ public class BitSet {
     return Long.bitCount(xor);
   }
 
-  public static int firstDiffIndex(BitSet a, BitSet b) {
+  public static int getFirstDiffIndex(BitSet a, BitSet b) {
     assert (a.size() == b.size());
     long xor = a.getValue() ^ b.getValue();
     if (xor == 0) {
