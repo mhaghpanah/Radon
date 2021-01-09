@@ -24,7 +24,7 @@ public class BitSetTest {
   }
 
   @Test
-  public void hammingDistance() {
+  public void notHammingDistance() {
     BitSet bitSet0 = new BitSet(3, 7);
     BitSet bitSet1 = new BitSet(3, 5);
     BitSet bitSet2 = new BitSet(3, 4);
@@ -34,13 +34,13 @@ public class BitSetTest {
   }
 
   @Test
-  public void firstDiffIndex() {
+  public void getFirstDiffIndex() {
     BitSet bitSet0 = new BitSet(3, 7);
     BitSet bitSet1 = new BitSet(3, 5);
     BitSet bitSet2 = new BitSet(3, 4);
-    assertEquals(1, BitSet.firstDiffIndex(bitSet0, bitSet1));
-    assertEquals(0, BitSet.firstDiffIndex(bitSet1, bitSet2));
-    assertEquals(0, BitSet.firstDiffIndex(bitSet0, bitSet2));
+    assertEquals(1, BitSet.getFirstDiffIndex(bitSet0, bitSet1));
+    assertEquals(0, BitSet.getFirstDiffIndex(bitSet1, bitSet2));
+    assertEquals(0, BitSet.getFirstDiffIndex(bitSet0, bitSet2));
   }
 
   @Test
