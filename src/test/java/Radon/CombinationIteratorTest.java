@@ -2,6 +2,7 @@ package Radon;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -80,7 +81,9 @@ public class CombinationIteratorTest {
       assertEquals(k, nums.length);
       assertTrue(isUnique(nums));
       assertTrue(isSorted(nums));
-      set.add(toList(nums));
+      List<Integer> list = toList(nums);
+      assertFalse(set.contains(list));
+      set.add(list);
     }
     assertEquals(sz, set.size());
   }
