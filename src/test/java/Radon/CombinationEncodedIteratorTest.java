@@ -26,7 +26,14 @@ public class CombinationEncodedIteratorTest {
   @Parameters
   public static Collection<Object[]> data() {
     return Arrays.asList(new Object[][]{
-        {1, 1, 1}, {1, 0, 1}, {5, 2, 10}, {5, 0, 1}, {5, 5, 1}, {0, 1, 0}, {7, 9, 0}, {-2, 0, 0},
+        {1, 1, 1},
+        {1, 0, 1},
+        {5, 2, 10},
+        {5, 0, 1},
+        {5, 5, 1},
+        {0, 1, 0},
+        {7, 9, 0},
+        {-2, 0, 0},
         {2, -1, 0}
     });
   }
