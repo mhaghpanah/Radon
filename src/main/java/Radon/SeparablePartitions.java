@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * A class to compute all separation partition for a given set of points. 
- * The separable partitions are encoded by BitSet.
+ * A class to compute all separation partition for a given set of points. The separable partitions
+ * are encoded by BitSet.
  */
 public class SeparablePartitions {
 
@@ -74,6 +74,19 @@ public class SeparablePartitions {
   public static List<BitSet> generateSeparablePartitions(Points points) {
     SeparablePartitions separablePartitions = new SeparablePartitions(points);
     return separablePartitions.encodedSeparablePartitions;
+  }
+
+  public static Set<BitSet> generateNonSeparablePartitions(int n,
+      List<BitSet> separablePartitions) {
+    Set<BitSet> partitions = new HashSet<>();
+    for (long i = 0; i < (1L << (n - 1)); i++) {
+      BitSet bitSet = BitSet.getInstance(n, i);
+      if (separablePartitions.contains(bitSet)) {
+        continue;
+      }
+      partitions.add(bitSet);
+    }
+    return partitions;
   }
 
 }
