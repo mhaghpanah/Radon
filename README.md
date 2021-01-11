@@ -12,5 +12,5 @@ java -cp out/ Radon.Main
 javac -d out src/main/java/Radon/*.java
 jar cvf Radon.jar -C out Radon/
 
-## How to run the jar file:
+### How to run the jar file:
 java -cp Radon.jar Radon.Main
