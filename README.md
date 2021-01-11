@@ -1,7 +1,7 @@
 # Radon
 
 This is a program for testing Radon partitions with tolerance.
-The program read a set of point in the plane from '/src/main/resourse/RadonPoint.txt' and output the maximum tolernce of a Radon partiton of the given points. 
+The program reads a set of point in the plane from '/src/main/resourse/RadonPoint.txt' and output the maximum tolernce of a Radon partiton of the given points. 
 
 ### How to compile:
 javac -d out src/main/java/Radon/*.java
