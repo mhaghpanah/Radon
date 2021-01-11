@@ -10,6 +10,7 @@ java -cp out/ Radon.Main
 
 ### How to make jar file:
 javac -d out src/main/java/Radon/*.java
+
 jar cvf Radon.jar -C out Radon/
 
 ### How to run the jar file:
