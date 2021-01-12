@@ -9,7 +9,7 @@ public class TolerantRadonAlgorithms {
   public static boolean Algorithm1(Points points, int t) {
     assert (GeometricPrimitive.isInGeneralPosition(points));
     List<BitSet> separablePartitions = SeparablePartitions.generateSeparablePartitions(points);
-    
+
     int n = points.size();
     Set<BitSet> partitions = SeparablePartitions
         .generateNonSeparablePartitions(n, separablePartitions);
@@ -59,7 +59,7 @@ public class TolerantRadonAlgorithms {
   public static boolean Algorithm2(Points points, int t) {
     assert (GeometricPrimitive.isInGeneralPosition(points));
     List<BitSet> currS = SeparablePartitions.generateSeparablePartitions(points);
-    
+
     int n = points.size();
     Set<BitSet> partitions = SeparablePartitions.generateNonSeparablePartitions(n, currS);
 
@@ -162,7 +162,7 @@ public class TolerantRadonAlgorithms {
     assert (Algorithm1(points, t) == Algorithm2(points, t));
     assert (Algorithm2(points, t) == Algorithm3(points, t));
 
-    return Algorithm3(points, t);
+    return Algorithm2(points, t);
   }
 
 }
